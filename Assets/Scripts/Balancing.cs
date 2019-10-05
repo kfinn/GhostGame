@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Balancing : MonoBehaviour
 {
-  private float currentAngle;
+  [HideInInspector]
+  public float currentAngle;
   private float angularVelocity = 10;
 
   void Start()
