@@ -10,6 +10,7 @@ public class Draggable : MonoBehaviour
   }
 
   private Nullable<Drag> currentDrag;
+  private Nullable<Drag> previousDrag;
 
   void Start()
   {
@@ -17,6 +18,7 @@ public class Draggable : MonoBehaviour
 
   void Update()
   {
+    previousDrag = currentDrag;
     var mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
     if (Input.GetMouseButtonDown(0))
@@ -49,5 +51,13 @@ public class Draggable : MonoBehaviour
 
     float scale = currentDrag == null ? 1 : 1.1f;
     transform.localScale = new Vector3(scale, scale, 1);
+  }
+
+  public bool Dragged() {
+    return currentDrag != null;
+  }
+
+  public bool DroppedThisFrame() {
+    return previousDrag != null && currentDrag == null;
   }
 }

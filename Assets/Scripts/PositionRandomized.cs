@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class PositionRandomized : MonoBehaviour
 {
-  [HideInInspector]
-  public Vector3 initialPosition;
-
   void Start()
   {
-    initialPosition = transform.position;
-
     var camera = Camera.main;
     var cameraHalfHeight = camera.orthographicSize;
     var cameraHalfWidth = cameraHalfHeight * camera.aspect;
