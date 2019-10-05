@@ -17,12 +17,6 @@ public class GraduallyFadingIn : MonoBehaviour
     {
       clicksCount += 1;
       GetComponent<SpriteRenderer>().color = Color.Lerp(Color.clear, Color.white, Mathf.Min(1, clicksCount / 4.0f));
-
-      if (clicksCount == 5)
-      {
-        var bicyclePieces = Resources.Load("Prefabs/Bicycle Pieces");
-        Instantiate(bicyclePieces);
-      }
     }
   }
 }
