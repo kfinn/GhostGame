@@ -46,5 +46,8 @@ public class Draggable : MonoBehaviour
         );
       }
     }
+
+    float scale = currentDrag == null ? 1 : 1.1f;
+    transform.localScale = new Vector3(scale, scale, 1);
   }
 }
