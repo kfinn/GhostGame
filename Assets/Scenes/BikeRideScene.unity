@@ -661,5 +661,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2950036920333758867, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: messages.Array.data[0]
+      value: This seems familiar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950036920333758867, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: messages.Array.data[1]
+      value: Where am I headed?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950036920333758867, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: messages.Array.data[2]
+      value: Bumpy ride today
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d083e876cbf764a4bbfc920288165179, type: 3}
