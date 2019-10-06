@@ -5,8 +5,10 @@ using UnityEngine;
 public class SpinSlowly : MonoBehaviour
 {
 
+  public float angularVelocity = -2;
+
   void Update()
   {
-    GetComponent<Rigidbody2D>().angularVelocity = -2;
+    GetComponent<Rigidbody2D>().angularVelocity = angularVelocity;
   }
 }
