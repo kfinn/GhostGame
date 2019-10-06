@@ -13,10 +13,14 @@ public class PositionRandomized : MonoBehaviour
     var x = Random.Range(-cameraHalfWidth, cameraHalfWidth);
     var y = Random.Range(-cameraHalfHeight, cameraHalfHeight);
 
-    transform.position = new Vector3(
+    var target = new Vector3(
         x,
         y,
         transform.position.z
     );
+    transform.position = target;
+    if (GetComponent<TargetSeeking>() is TargetSeeking targetSeeking) {
+      targetSeeking.targetPosition = target;
+    }
   }
 }

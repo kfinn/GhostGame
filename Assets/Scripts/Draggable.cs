@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
+  private static float lastMouseClickConsumedTime;
+
   struct Drag
   {
     public Vector3 startPosition;
@@ -21,10 +23,11 @@ public class Draggable : MonoBehaviour
     previousDrag = currentDrag;
     var mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-    if (Input.GetMouseButtonDown(0))
+    if (Input.GetMouseButtonDown(0) && lastMouseClickConsumedTime != Time.time)
     {
       if (GetComponent<Collider2D>().OverlapPoint(new Vector2(mouseWorldPosition.x, mouseWorldPosition.y)))
       {
+        lastMouseClickConsumedTime = Time.time;
         currentDrag = new Drag
         {
           startPosition = transform.position,

@@ -13,8 +13,6 @@ public class AppearingAfterWarning : MonoBehaviour
 
     void OnEnable()
     {
-        Debug.Log("OnEnable");
-
         toAppear.SetActive(false);
         warning.SetActive(true);
 
