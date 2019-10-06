@@ -11,13 +11,11 @@ public class RelativeInitialPositionRestoring : MonoBehaviour
 
   [HideInInspector]
   public Vector3 initialPosition;
-  private bool draggedLastFrame;
   private ISet<RelativeInitialPositionRestoring> attachedPieces;
 
   void Start()
   {
     initialPosition = transform.position;
-    draggedLastFrame = false;
     attachedPieces = new HashSet<RelativeInitialPositionRestoring>() { this };
   }
 

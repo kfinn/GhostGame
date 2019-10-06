@@ -9,7 +9,6 @@ public class AppearingAfterWarning : MonoBehaviour
 
     private float startedOn;
     private bool appeared;
-    private bool disappeared;
 
     void OnEnable()
     {
@@ -19,7 +18,6 @@ public class AppearingAfterWarning : MonoBehaviour
         startedOn = Time.time;
 
         appeared = false;
-        disappeared = false;
     }
 
     void Update()

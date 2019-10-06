@@ -1,17 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Hazardous : MonoBehaviour
 {
+    private ContactPoint2D[] contactPoints;
     public Collider2D target;
+    public GameObject collision;
 
-    void Update()
-    {
-        Debug.Log(GetComponent<Collider2D>());
-        Debug.Log(target);
-        if (GetComponent<Collider2D>().IsTouching(target)) {
-            Debug.Log("collision!");
+    void Start() {
+        contactPoints = new ContactPoint2D[1];
+    }
+
+    void Update() {
+        var contactPointsCount = GetComponent<Collider2D>().GetContacts(contactPoints);
+        if (contactPointsCount > 0) {
+            var contactPoint = contactPoints[0];
+            collision.transform.position = contactPoint.point;
+            collision.SetActive(true);
         }
     }
 }
