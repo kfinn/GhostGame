@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnablingAfterPuzzleSolved : MonoBehaviour
 {
-    private const string PlayerPrefsKey = "BikesBuilt";
+    public const string PlayerPrefsKey = "BikesBuilt";
 
     public GameObject toEnable;
     public int piecesCount;

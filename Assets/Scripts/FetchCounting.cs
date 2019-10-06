@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class FetchCounting : MonoBehaviour
 {
-  private const string PlayerPrefsKey = "FetchesFetched";
+  public const string PlayerPrefsKey = "FetchesFetched";
 
   enum State
   {

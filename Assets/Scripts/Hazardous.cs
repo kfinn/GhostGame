@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hazardous : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Hazardous : MonoBehaviour
             var contactPoint = contactPoints[0];
             collision.transform.position = contactPoint.point;
             collision.SetActive(true);
+
+            SceneManager.LoadScene("Death Scene", LoadSceneMode.Single);
         }
     }
 }

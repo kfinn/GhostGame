@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class TruckCounting : MonoBehaviour
 {
-  private const string PlayerPrefsKey = "TrucksDodged";
+  public const string PlayerPrefsKey = "TrucksDodged";
 
   enum State
   {

@@ -434,7 +434,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &925988992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,6 +1644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 876401735}
+  collision: {fileID: 1112795617}
 --- !u!50 &2080173029
 Rigidbody2D:
   serializedVersion: 4
