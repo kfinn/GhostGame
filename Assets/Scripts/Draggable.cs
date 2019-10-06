@@ -41,11 +41,22 @@ public class Draggable : MonoBehaviour
       if (currentDrag is Drag drag)
       {
         var mouseDiff = mouseWorldPosition - drag.startMousePosition;
-        GetComponent<TargetSeeking>().targetPosition = new Vector3(
-            drag.startPosition.x + mouseDiff.x,
-            drag.startPosition.y + mouseDiff.y,
-            drag.startPosition.z
+        var target = new Vector3(
+          drag.startPosition.x + mouseDiff.x,
+          drag.startPosition.y + mouseDiff.y,
+          drag.startPosition.z
         );
+        if (GetComponent<TargetSeeking>() is TargetSeeking targetSeeking)
+        {
+          GetComponent<TargetSeeking>().targetPosition = target;
+        }
+        else
+        {
+          if (GetComponent<Rigidbody2D>() is Rigidbody2D rigidbody) {
+            rigidbody.velocity = (target - transform.position) * 7;
+          }
+          transform.position = target;
+        }
       }
     }
 
@@ -53,11 +64,13 @@ public class Draggable : MonoBehaviour
     transform.localScale = new Vector3(scale, scale, 1);
   }
 
-  public bool Dragged() {
+  public bool Dragged()
+  {
     return currentDrag != null;
   }
 
-  public bool DroppedThisFrame() {
+  public bool DroppedThisFrame()
+  {
     return previousDrag != null && currentDrag == null;
   }
 }

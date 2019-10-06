@@ -15,10 +15,10 @@ public class Balancing : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    angularVelocity = Mathf.Sign(angularVelocity) * Mathf.Min(45, Mathf.Abs(angularVelocity));
+    angularVelocity = Mathf.Clamp(angularVelocity, -45, 45);
 
     currentAngle += angularVelocity * Time.deltaTime;
-    currentAngle = Mathf.Sign(currentAngle) * Mathf.Min(45, Mathf.Abs(currentAngle));
+    currentAngle = Mathf.Clamp(currentAngle, -45, 45);
 
     transform.rotation = Quaternion.Euler(0, 0, currentAngle);
   }

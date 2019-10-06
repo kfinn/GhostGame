@@ -17,7 +17,7 @@ public class WindBalanceDisrupting : MonoBehaviour
     {
         windForce += Random.Range(-10, 10);
         windForce *= Random.Range(0.5f, 1.2f);
-        windForce = Mathf.Sign(windForce) * Mathf.Min(100, Mathf.Abs(windForce));
+        windForce = Mathf.Clamp(windForce, -100, 100);
 
         GetComponent<Balancing>().ApplyForce(windForce * Time.deltaTime);
     }
