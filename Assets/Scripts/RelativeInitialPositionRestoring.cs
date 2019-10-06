@@ -64,4 +64,8 @@ public class RelativeInitialPositionRestoring : MonoBehaviour
   {
     return other.initialPosition - initialPosition;
   }
+
+  public int AttachedPiecesCount() {
+    return attachedPieces.Count;
+  }
 }
