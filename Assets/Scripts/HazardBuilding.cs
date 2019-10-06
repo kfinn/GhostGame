@@ -27,14 +27,11 @@ public class HazardBuilding : MonoBehaviour
     var cameraHalfWidth = cameraHalfHeight * camera.aspect;
     var x = Random.Range(-cameraHalfWidth, cameraHalfWidth);
 
-    var builtHazard = Instantiate(
-        hazard
-    );
-
-    builtHazard.transform.position = new Vector3(
+    hazard.SetActive(true);
+    hazard.transform.position = new Vector3(
         x,
-        builtHazard.transform.position.y,
-        builtHazard.transform.position.z
+        hazard.transform.position.y,
+        hazard.transform.position.z
     );
 
     lastHazardBuiltAt = Time.time;

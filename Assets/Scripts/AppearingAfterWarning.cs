@@ -11,8 +11,10 @@ public class AppearingAfterWarning : MonoBehaviour
     private bool appeared;
     private bool disappeared;
 
-    void Start()
+    void OnEnable()
     {
+        Debug.Log("OnEnable");
+
         toAppear.SetActive(false);
         warning.SetActive(true);
 
@@ -28,10 +30,8 @@ public class AppearingAfterWarning : MonoBehaviour
             warning.SetActive(false);
             toAppear.SetActive(true);
             appeared = true;
-        } else if (Time.time > startedOn + 6 && !disappeared) {
-            warning.SetActive(false);
-            toAppear.SetActive(false);
-            disappeared = true;
+        } else if (Time.time > startedOn + 6) {
+            gameObject.SetActive(false);
         }
     }
 }
