@@ -4,9 +4,9 @@ public class Chasing : MonoBehaviour
 {
   [HideInInspector]
   public float velocity;
-  private const float MaxVelocity = 1000;
-  private const float MaxAcceleration = 100;
-  private const float MaxBraking = 10;
+  private const float MaxVelocity = 100;
+  private const float MaxAcceleration = 30;
+  private const float MaxBraking = 20;
   public Transform target;
   public float targetOffsetX;
 
@@ -21,7 +21,8 @@ public class Chasing : MonoBehaviour
     var idealVelocity = Mathf.Sign(ballDistance) * 2 * MaxBraking * Mathf.Sqrt(Mathf.Abs(ballDistance) / MaxBraking);
     var idealAcceleration = idealVelocity - velocity;
 
-    var accelerationBound = Mathf.Sign(idealAcceleration) == Mathf.Sign(velocity) ? MaxAcceleration : MaxBraking;
+    var accelerationBoundPerSecond = Mathf.Sign(idealAcceleration) == Mathf.Sign(velocity) ? MaxAcceleration : MaxBraking;
+    var accelerationBound = accelerationBoundPerSecond * Time.deltaTime;
     var attainableIdealAcceleration = Mathf.Clamp(idealAcceleration, -accelerationBound, accelerationBound);
 
     velocity += attainableIdealAcceleration;
