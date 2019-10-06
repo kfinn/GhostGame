@@ -13,6 +13,6 @@ public class TransformBalanceTracking : MonoBehaviour
     void Update()
     {
         var dx = transform.position.x - target.transform.position.x;
-        GetComponent<Balancing>().ApplyForce(dx * 10 * Time.deltaTime);
+        GetComponent<Balancing>().ApplyForce(dx * 20 * Time.deltaTime);
     }
 }

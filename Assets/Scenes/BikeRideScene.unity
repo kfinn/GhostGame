@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 876401731}
   - component: {fileID: 876401732}
   - component: {fileID: 876401733}
+  - component: {fileID: 876401734}
   m_Layer: 0
   m_Name: BIke
   m_TagString: Untagged
@@ -307,6 +308,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handlebarAndWheelAnimator: {fileID: 949534907}
+--- !u!114 &876401734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876401727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329479196a3084defb5e483f0f75b7cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &925988992
 GameObject:
   m_ObjectHideFlags: 0
