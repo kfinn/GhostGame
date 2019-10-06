@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 478678810}
   - component: {fileID: 478678814}
   - component: {fileID: 478678815}
+  - component: {fileID: 478678816}
   m_Layer: 0
   m_Name: ball
   m_TagString: Untagged
@@ -436,6 +437,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1273802067}
   scenePath: Fetch Scene
+--- !u!95 &478678816
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478678809}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d8d8e66a118f42059f14d7418ced654, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &555346124
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,6 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dde5f20641d84879b57e79862c36e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefsOverride: TrucksDodged
   toEnable: {fileID: 1601921722}
   character: {fileID: 1273802067}
 --- !u!58 &555346126
@@ -528,6 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dde5f20641d84879b57e79862c36e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefsOverride: BikesBuilt
   toEnable: {fileID: 142774954}
   character: {fileID: 1273802067}
 --- !u!58 &676577227
@@ -719,6 +741,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2950036920333758867, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: messages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950036920333758867, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: messages.Array.data[1]
+      value: I guess I'm dead?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950036920333758867, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: messages.Array.data[2]
+      value: I wonder if I can figure out what happened
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950036920333758867, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: messages.Array.data[3]
+      value: Maybe I'll find some more details if I look around...
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d083e876cbf764a4bbfc920288165179, type: 3}
 --- !u!1 &1273802067 stripped
@@ -757,6 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dde5f20641d84879b57e79862c36e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefsOverride: FetchesFetched
   toEnable: {fileID: 478678809}
   character: {fileID: 1273802067}
 --- !u!58 &1596878349
@@ -801,6 +844,7 @@ GameObject:
   - component: {fileID: 1601921724}
   - component: {fileID: 1601921723}
   - component: {fileID: 1601921726}
+  - component: {fileID: 1601921727}
   m_Layer: 0
   m_Name: road
   m_TagString: Untagged
@@ -912,5 +956,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b1288949f2d49d29915f34cb7e6921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
+  character: {fileID: 1273802067}
   scenePath: Bike Ride Scene
+--- !u!95 &1601921727
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601921722}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0f0a6e6404274b9c8b3f00d14684d9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -10,7 +10,7 @@ public class SceneLaunching : MonoBehaviour
 
     private float characterOutOfColliderAt;
 
-    void Start() {
+    void OnEnable() {
         characterOutOfColliderAt = Time.time;
     }
 
@@ -20,7 +20,7 @@ public class SceneLaunching : MonoBehaviour
             characterOutOfColliderAt = Time.time;
         }
 
-        if (Time.time > characterOutOfColliderAt + 4) {
+        if (characterOutOfColliderAt != 0 && Time.time > characterOutOfColliderAt + 4) {
             SceneManager.LoadScene(scenePath, LoadSceneMode.Single);
         }
     }

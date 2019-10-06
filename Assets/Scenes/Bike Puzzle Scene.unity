@@ -2088,15 +2088,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2950036920450070335, guid: d083e876cbf764a4bbfc920288165179,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2950036919227574864, guid: d083e876cbf764a4bbfc920288165179,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950036920333758867, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: messages.Array.data[0]
+      value: These shapes...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950036920333758867, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: messages.Array.data[1]
+      value: I've definitely put these together before.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950036920333758867, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: messages.Array.data[2]
+      value: Nothing like the pleasure of putting together a machine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950036920450070335, guid: d083e876cbf764a4bbfc920288165179,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d083e876cbf764a4bbfc920288165179, type: 3}

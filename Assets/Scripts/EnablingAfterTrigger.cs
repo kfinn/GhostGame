@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class EnablingAfterTrigger : MonoBehaviour
 {
-    public GameObject toEnable;
-    public GameObject character;
+  public string playerPrefsOverride;
+  public GameObject toEnable;
+  public GameObject character;
 
-    void Start() {
-        toEnable.SetActive(false);
-    }
-
-    void Update()
+  void Start()
+  {
+    if (playerPrefsOverride != null && PlayerPrefs.GetInt(playerPrefsOverride) > 0)
     {
-        if (GetComponent<Collider2D>().OverlapPoint(character.transform.position)) {
-            toEnable.SetActive(true);
-            gameObject.SetActive(false);
-        }
+      toEnable.SetActive(true);
+      gameObject.SetActive(false);
     }
+    else
+    {
+      toEnable.SetActive(false);
+    }
+  }
+
+  void Update()
+  {
+    if (GetComponent<Collider2D>().OverlapPoint(character.transform.position))
+    {
+      toEnable.SetActive(true);
+      gameObject.SetActive(false);
+    }
+  }
 }
